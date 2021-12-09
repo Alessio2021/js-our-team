@@ -30,3 +30,26 @@ const team = [
     image: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+const container = document.querySelector('.team-container');
+
+for (let i = 0; i < team.length; i++){
+  const manageteam = team[i];
+
+  const element = 
+  `
+  <div class="team-card">
+  <div class="card-image">
+    <img
+      src="img/${manageteam.image}"
+      alt="${manageteam.name}"
+    />
+  </div>
+  <div class="card-text">
+    <h3>${manageteam.name}</h3>
+    <p>${manageteam.role}</p>
+  </div>
+  `
+
+  container.innerHTML += element;
+}
